@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvZ-aD-SDt">
+                                <rect key="frame" x="163" y="344" width="51" height="31"/>
+                                <connections>
+                                    <action selector="startStopClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="53T-Jk-g7X"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Timer App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvj-Lw-cyd">
+                                <rect key="frame" x="23.5" y="20" width="328" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGj-v4-eye">
+                                <rect key="frame" x="10.5" y="213" width="354" height="102"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Start/Stop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPz-Jo-gvV">
+                                <rect key="frame" x="148" y="322" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtJ-HW-HVQ">
+                                <rect key="frame" x="150" y="382" width="75" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.69275085295130001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Uxw-EB-Ehr"/>
+                                    <constraint firstAttribute="width" constant="75" id="tGr-ld-bjD"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="restartTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ox-dT-UVG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fGj-v4-eye" secondAttribute="trailing" constant="10.5" id="1D0-o7-rkf"/>
+                            <constraint firstItem="fvZ-aD-SDt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6pl-Gc-Ghf"/>
+                            <constraint firstItem="zvj-Lw-cyd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9aQ-oi-GCG"/>
+                            <constraint firstItem="jPz-Jo-gvV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G5m-B1-KQP"/>
+                            <constraint firstItem="fGj-v4-eye" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10.5" id="WaI-r8-uSd"/>
+                            <constraint firstItem="fGj-v4-eye" firstAttribute="top" secondItem="zvj-Lw-cyd" secondAttribute="bottom" constant="103" id="aPa-9D-7IL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zvj-Lw-cyd" secondAttribute="trailing" constant="23.5" id="e0v-ne-NoU"/>
+                            <constraint firstItem="fvZ-aD-SDt" firstAttribute="top" secondItem="jPz-Jo-gvV" secondAttribute="bottom" constant="1" id="ewg-xv-ZXK"/>
+                            <constraint firstItem="qtJ-HW-HVQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kET-rx-6aL"/>
+                            <constraint firstItem="jPz-Jo-gvV" firstAttribute="top" secondItem="fGj-v4-eye" secondAttribute="bottom" constant="7.5" id="kiJ-HX-Hh2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qtJ-HW-HVQ" secondAttribute="bottom" constant="235" id="sZl-iA-5JF"/>
+                            <constraint firstItem="zvj-Lw-cyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23.5" id="uTs-KG-xsA"/>
+                            <constraint firstItem="qtJ-HW-HVQ" firstAttribute="top" secondItem="fvZ-aD-SDt" secondAttribute="bottom" constant="27" id="wn2-Oq-LKi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="startstop" destination="fvZ-aD-SDt" id="e93-QF-CtX"/>
+                        <outlet property="time" destination="fGj-v4-eye" id="QMU-6R-jqY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DeG-XA-OsN">
+            <objects>
+                <viewController id="LSq-3b-gYZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9s-mx-Qwe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Bmo-TM-pSW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9L-uP-w7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="134"/>
+        </scene>
+    </scenes>
+</document>
