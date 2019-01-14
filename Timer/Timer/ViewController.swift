@@ -34,12 +34,12 @@ class ViewController: UIViewController {
         if let textNum = time.text, let timerNum = Double(textNum) {
             let newTimerNum = timerNum + 0.01
             let rounded = round(newTimerNum * 100)/100
-            time.text = String(rounded)
+            time.text = String(format: "%.2f", rounded)
         }
     }
     @IBAction func restartTimer(_ sender: Any) {
         stopTimer()
-        time.text = "0"
+        time.text = "0.00"
         startstop.setOn(false, animated: true)
     }
     @IBAction func startStopClicked(_ sender: Any) {
