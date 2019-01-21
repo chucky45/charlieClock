@@ -17,13 +17,15 @@ class ViewController: UIViewController {
             self.BlockofSky.center.y += 100
             self.BlockofSky.center.x += 100
         })
-        guestureRecognition = UIPanGestureRecognizer(target: BlockofSky, action: #selector(ViewController.viewWasDragged(_:)))
+        guestureRecognition = UIPanGestureRecognizer(target: self, action: #selector(ViewController.viewWasDragged(_:)))
         BlockofSky.isUserInteractionEnabled = true
         BlockofSky.addGestureRecognizer(guestureRecognition)
     }
+    
     @objc func viewWasDragged(_ Sender: UIPanGestureRecognizer) {
-        print(Sender.translation(in: self.view))
-        
+        let translator = Sender.translation(in: self.view)
+        BlockofSky.center = CGPoint(x: BlockofSky.center.x + translator.x, y: BlockofSky.center.y + translator.y)
+        Sender.setTranslation(CGPoint.zero, in: self.view)
     }
     func getRandomColor() -> UIColor {
         //Generate between 0 to 1
